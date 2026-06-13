@@ -118,7 +118,8 @@ def test_multiline_commit_with_signoff():
 
 def test_missing_signoff():
     """A commit message without any Signed-off-by line should fail."""
-    msg = _write_commit_msg('fix: resolve timeout issue\n\nJust a quick fix.\n')
+    body = 'fix: resolve timeout issue\n\nJust a quick fix.\n'
+    msg = _write_commit_msg(body)
     try:
         code, errors = check_dco(msg)
         assert code == 1

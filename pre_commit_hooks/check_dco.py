@@ -12,7 +12,6 @@ from __future__ import annotations
 import argparse
 import re
 from collections.abc import Sequence
-from typing import Optional
 
 DCO_PATTERN = re.compile(
     r'^Signed-off-by:\s+'
@@ -54,7 +53,7 @@ def check_dco(commit_msg_path: str) -> tuple[int, list[str]]:
         # No sign-off found at all
         errors.append(
             f'{commit_msg_path}: missing Signed-off-by line. '
-            f'Add "Signed-off-by: Your Name <your@email>" to the commit message.',
+            f'Add "Signed-off-by: Name <email>" to the commit message.',
         )
 
     for err in errors:
