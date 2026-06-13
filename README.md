@@ -45,6 +45,12 @@ Require literal syntax when initializing empty or zero Python builtin types.
 #### `check-case-conflict`
 Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT.
 
+#### `check-dco`
+Verifies that commit messages contain a valid ``Signed-off-by: Name <email>``
+line per the `Developer Certificate of Origin <https://developercertificate.org/>`__.
+  - This hook runs in the ``commit-msg`` stage to catch missing sign-offs
+    before they're pushed.
+
 #### `check-executables-have-shebangs`
 Checks that non-binary executables have a proper shebang.
 
@@ -212,3 +218,4 @@ Trims trailing whitespace.
 If you'd like to use these hooks, they're also available as a standalone package.
 
 Simply `pip install pre-commit-hooks`
+
