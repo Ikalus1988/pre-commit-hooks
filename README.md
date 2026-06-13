@@ -218,4 +218,3 @@ Trims trailing whitespace.
 If you'd like to use these hooks, they're also available as a standalone package.
 
 Simply `pip install pre-commit-hooks`
-
