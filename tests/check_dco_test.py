@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import os
-import pytest
 import tempfile
 
-from pre_commit_hooks.check_dco import check_dco, main
+import pytest
+
+from pre_commit_hooks.check_dco import check_dco
+from pre_commit_hooks.check_dco import main
 
 
 def _write_commit_msg(content: str) -> str:

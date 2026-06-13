@@ -7,7 +7,6 @@ in commit-msg stage) and checks that it contains a valid
 This is a pure Python implementation with no external dependencies —
 only the standard library is used (``re``, ``sys``).
 """
-
 from __future__ import annotations
 
 import argparse
@@ -32,7 +31,7 @@ def check_dco(commit_msg_path: str) -> tuple[int, list[str]]:
 
     Returns (exit_code, diagnostic_messages).
     """
-    with open(commit_msg_path, 'r', encoding='utf-8') as f:
+    with open(commit_msg_path, encoding='utf-8') as f:
         lines = f.read().splitlines()
 
     errors: list[str] = []
